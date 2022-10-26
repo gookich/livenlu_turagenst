@@ -1,0 +1,30 @@
+﻿<Window x:Class="livenlup1.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:livenlup1"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="75"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="30"/>
+        </Grid.RowDefinitions>
+        <Image HorizontalAlignment="Left" Source="/sisk.jpg">
+        </Image>
+        <TextBlock Text="Турагенство WTR " FontSize="30" HorizontalAlignment="Center" VerticalAlignment="Center" />
+        <Grid Background="#bae3e8" Panel.ZIndex="-2">
+        </Grid>
+        <Grid Grid.Row="2" Background="#445c93"      >
+        </Grid>
+        <Frame NavigationUIVisibility="Hidden" ContentRendered="MainFrame_ContentRendered"         Grid.Row="1" Name="MainFrame" Navigated="MainFrame_Navigated"    />
+        <Button Content="Back" Name="BtnBack"  HorizontalAlignment="Right"    Click="BtnBack_Click"     />
+        <Button x:Name="Button_Hotel" Content="Отели" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="80,0,0,0" Click="Button_Hotel_Click"/>
+
+
+        <Button x:Name="Button_Login" Content="Войти анонимно" Width="150" HorizontalAlignment="Left" Margin="20,0,0,0" VerticalAlignment="Center" Grid.Row="2" Click="Button_Login_Click"/>
+    </Grid>
+    
+</Window>
